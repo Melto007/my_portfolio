@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;800;900&family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --background-color: #242B2E;
+    --primary-color: #9EFF8F;
+    --white-color: #FCFEFF;
+    --black-color: #0D0D0D;
+    --light-gray-color: #2E3133;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.about-section {
+    padding: 1rem 1rem;
+}
+
+.contact-content h1 {
+    border-bottom: 0.1rem solid var(--primary-color);
+    padding-bottom: 0.3rem;
+    position: relative;
+}
+
+.contact-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    animation: headingDot 3s linear infinite;
+}
+
+@keyframes headingDot {
+    0% {
+        left: 0px;
+      }
+      50% {
+        left: 100%;
+      }
+      100% {
+        left: 0px;
+    }
+}
+
+.about-section h1 {
+    font-size: 1.8rem;
+    border-bottom: 0.1rem solid var(--primary-color);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-align: justify;
+}

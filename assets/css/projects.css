@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;800;900&family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --background-color: #242B2E;
+    --primary-color: #9EFF8F;
+    --white-color: #FCFEFF;
+    --black-color: #0D0D0D;
+    --light-gray-color: #2E3133;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.project-content {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-content h1 {
+    font-family: 'Nunito',sans-serif;
+    border-bottom: 0.1rem solid var(--primary-color);
+    padding-bottom: 0.3rem;
+    position: relative;
+}
+
+.project-content h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.19rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    animation: headingdot 3s linear infinite;
+}
+
+@keyframes headingdot {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    width: 100%;
+    height: 40vh;
+    background-color: var(--light-gray-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black-color);
+}
+
+.card img {
+    width: 98%;
+}
+
+.card h1 {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.icons {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.icons i {
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 1180px) {
+    .card h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .product-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card h1 {
+        font-size: 1rem;
+    }
+
+    .card {
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .product-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .product-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        height: 40vh;
+    }
+}
